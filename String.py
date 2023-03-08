@@ -43,6 +43,10 @@ name = "Sam"
 age = 22
 print(f"{name} is {age} years old.{name}'s sister is also {age}.") #Output Sam is 22 years old. Sam's sister is also 22.
 
+name = 'Sam' 
+age = [25, 23]
+print(f"{name}'s {age[1]} age is smaller than his {age[0]} older brother")
+
 #List in Python
 mylist = [1,2,3]
 len(mylist) #Output 3 LENGTH OF LIST
