@@ -102,7 +102,7 @@ with open('babu.txt') as f:             #f is an variable here
 with open('babu.txt', mode = 'w') as f:
   f.write('I created this file somereasons') #It overwritet the file with the sentense as shown 
   
-withopen('babu.txt', mode = 'r') as f:
+with open('babu.txt', mode = 'r') as f:
   print(f.read())             #It then after the overright, you would need to always command the line with read and mode as r
   
 
