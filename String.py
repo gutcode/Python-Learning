@@ -82,6 +82,31 @@ my_dict['key':'value','key2':'value2']
 price_lookup = {'apple':1, 'Orange': 2, 'Lemon': 3}
 price_lookup['apple'] #Output 1
 
+#OLDER STYLE OF OVERWRITING FILE
+%%writefile babu.txt                #Output writing file
+This is a first line
+This is another line which is second
+THis is a last and third one
+
+babu = open('babu.txt')    #No Output
+babu.read() #Provide a single sentence with contents on it
+babu.seek(0) #Sets the new position of variable
+babu.read() #You can read again after the seek usages
+
+#NEWER STYLE OF OVERWRITING FILE
+
+with open('babu.txt') as f:             #f is an variable here
+  contents = f.read()                   #You won't need to use seek after this since it closes itself
+  
+  
+with open('babu.txt', mode = 'w') as f:
+  f.write('I created this file somereasons') #It overwritet the file with the sentense as shown 
+  
+withopen('babu.txt', mode = 'r') as f:
+  print(f.read())             #It then after the overright, you would need to always command the line with read and mode as r
+  
+
+  
 
 
 
