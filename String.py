@@ -89,9 +89,14 @@ This is another line which is second
 THis is a last and third one
 
 babu = open('babu.txt')    #No Output
-babu.read() #Provide a single sentence with contents on it
+babu.read() #Provide a single sentence with contents on it | Output: 'This is a first line\nThis is another line which is second\nTHis is a last and third one\n'
 babu.seek(0) #Sets the new position of variable
 babu.read() #You can read again after the seek usages
+
+readlines
+babu = open('babu.txt')
+babu.readline() #reads only the first line | Output: 'This is a first line\n' 
+babu.readlines() #reads all line | Output : ['This is a first line\n', 'This is another line which is second\n', 'THis is a last and third one\n']
 
 #NEWER STYLE OF OVERWRITING FILE
 
@@ -105,7 +110,10 @@ with open('babu.txt', mode = 'w') as f:
 with open('babu.txt', mode = 'r') as f:
   print(f.read())             #It then after the overright, you would need to always command the line with read and mode as r
   
-
+with open('babu.txt',mode ='a') as f:
+  f.write('This is a fourth line') #a = attend | It adds the fourth line on the variable of f
+  
+  
   
 
 
